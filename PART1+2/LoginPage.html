@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="StyleSheet1.css">
+    <style>
+        .Absolute-Center {
+            position: absolute;
+            width: 160px;
+            height: 80px;
+            top: 50%;
+            margin-top: -40px;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    <script type="text/javascript">
+        var TF;
+        var usernameArray = ['Mark', 'Darko', 'Ricky'];
+        var passwordArray = ['a1234', 'a789', 'a456'];        function check() {
+            for (var i = 0; i < usernameArray.length; i++) {
+                if (usernameArray[i] == document.getElementById('userName').value && passwordArray[i] == document.getElementById('pwd').value) {
+                    TF = true;
+                    location.href('firstPage.html');
+                    break;
+                } else {
+                    TF = false;
+                }
+            }
+            if (TF == false) {
+                alert('your userName or Password is either incorrect or not exist');
+            }
+
+        }
+    </script>
+</head>
+<body background="./homePage_img/Chinese.jpg" style=" background-repeat:no-repeat ;background-size:100% 100%;background-attachment: fixed; " >
+
+    <div class="Absolute-Center" id="login">
+    <p>Login</p>
+    UserName:Mark<input type="text" id="userName"><br>
+    <br>
+    PassWord:a1234<input type="password"id="pwd"><br>
+    <input type="submit" value="submit" onclick="check()">
+    </div>
+
+</body>
+</html>
